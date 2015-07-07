@@ -24,12 +24,12 @@
               <input class="form-control" id="track" placeholder="Song Title" autofocus>
             </div>
             <div class="form-group">
-              <input type="submit" class="btn btn-danger" value="Search" id="submit">
+              <input type="submit" class="btn btn-success" value="Search" id="submit">
             <!-- </div> -->
             <!-- reset button -->
             <!-- <div class="form-group">  -->
               <a href="index.html">
-              <input type="button" class="btn btn-success" value="Start over" id="reset">
+              <input type="button" class="btn btn-danger" value="Start over" id="reset">
               </a>
             </div>
           </form>
@@ -57,10 +57,10 @@
   <script type="text/template" id="spotify-template">
     <div class="music">
       <p>
-        <div class="col-lg-10">
+        <div class="col-md-12">
           <img src='<%= image %>'>
         </div> 
-        <div class="col-lg-10" id="text">
+        <div class="col-md-12" id="text">
           <%= track %> - <%= artist %>
         </div>
         <div>
