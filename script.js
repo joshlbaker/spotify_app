@@ -60,7 +60,7 @@ var $spotifyTemp = _.template($('#spotify-template').html());
 
 						list.render();
 
-			
+						
 						$(document).ajaxStart(function () {
 								$("#loading").show();
 							}).ajaxStop(function () {
@@ -92,8 +92,8 @@ var $spotifyTemp = _.template($('#spotify-template').html());
 					// console.log(getArtistArray.name)
 
 
-	  $spotifySearch.each(function(){
-    this.reset();		
+	  // $spotifySearch.each(function(){
+   //  this.reset();		
 
     // on('submit', )
 
@@ -106,7 +106,7 @@ var $spotifyTemp = _.template($('#spotify-template').html());
 				});
 			
   	});
-	});
+	// });
 
 
 // });
