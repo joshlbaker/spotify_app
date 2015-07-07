@@ -24,11 +24,12 @@
               <input class="form-control" id="track" placeholder="Song Title" autofocus>
             </div>
             <div class="form-group">
-              <input type="submit" class="btn btn-success" value="Search">
+              <input type="submit" class="btn btn-danger" value="Search">
             </div>
           </form>
           <hr>
         </div>
+        <div id="loading"><img src='https://github.com/sf-wdi-19-20/modules/blob/master/w3_d1_2_apis_continued/spotify_app/loading.gif?raw=true' style="display: none"></div>
         <div id="results"></div>
       </div>
     </div>
@@ -50,13 +51,17 @@
   <script type="text/template" id="spotify-template">
     <div class="music">
       <p>
-        <div class="col-sm-2">
+        <div class="col-lg-10">
           <img src='<%= image %>'>
         </div> 
-        <div class="col-md-10">
+        <div class="col-lg-10" id="text">
           <%= track %> - <%= artist %>
+        </div>
+        <div>
+          <audio src='<%= audio %>' controls="controls" id="audio">
         </div>     
       </p>
+      <br>
       <hr>
     </div>
   </script>

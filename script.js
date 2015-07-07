@@ -2,10 +2,11 @@ $(function() {
 
 	// Constructor
 
-	function TrackList(image, track, artist){
+	function TrackList(image, track, artist, audio){
 		this.image = image;
 		this.track = track;
 		this.artist = artist;
+		this.audio = audio;
 	}
 		TrackList.all = [];
 
@@ -48,16 +49,23 @@ var $spotifyTemp = _.template($('#spotify-template').html());
 						console.log(track.album.images[0].url);
 
 						var trackName = (track.name);
+						console.log(track);
 						var artistName = (track.artists[0].name);
 						var image = (track.album.images[0].url);
+						var audio = (track.preview_url);
 
-						var list = new TrackList( image, trackName, artistName);
+						var list = new TrackList( image, trackName, artistName, audio);
 
 						list.save();
 
 						list.render();
 
-
+			
+						$(document).ajaxStart(function () {
+								$("#loading").show();
+							}).ajaxStop(function () {
+								$("#loading").hide();
+						});
 
 
 
@@ -99,4 +107,6 @@ var $spotifyTemp = _.template($('#spotify-template').html());
 			
   	});
 	});
+
+
 // });
