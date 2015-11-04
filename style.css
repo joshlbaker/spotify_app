@@ -1,11 +1,17 @@
 img {
-	height: 150px;
-	width: 150px;
+	max-height: 250px;
+	max-width: 250px;
 	margin-top: 5px;
 	margin-bottom: -50px;
 }
 body{
 	background-color:black;
+	/*margin-left: 100px;
+	margin-right: 100px;*/
+}
+#header{
+	padding-left: 150px;
+	padding-right: 150px;
 }
 #text{
 	color:white;
@@ -15,9 +21,9 @@ body{
 #audio{
 	float: right;
 }
-/*#loading{
-	display: none;
-}*/
 .text-center{
 color:white;
+}
+#results{
+	padding: 100px;
 }

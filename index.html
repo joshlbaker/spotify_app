@@ -3,20 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- bootstrap css -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-  <!-- custom styles -->
   <link rel="stylesheet" type="text/css" href="style.css">
-
-  <title>Spotify App</title>
+  <title>SongFinder</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="text-center">
+      <div class="col-md-12">
+        <div class="text-center" id="header">
           <h1>Search for Songs</h1>
           <hr>
           <form id="spotify-search">
@@ -25,53 +20,39 @@
             </div>
             <div class="form-group">
               <input type="submit" class="btn btn-success" value="Search" id="submit">
-            <!-- </div> -->
-            <!-- reset button -->
-            <!-- <div class="form-group">  -->
-              <a href="index.html">
-              <input type="button" class="btn btn-danger" value="Start over" id="reset">
-              </a>
             </div>
           </form>
           <hr>
         </div>
-        <div id="loading"><img src='https://github.com/sf-wdi-19-20/modules/blob/master/w3_d1_2_apis_continued/spotify_app/loading.gif?raw=true' style="display: none"></div>
-        <div id="results"></div>
+        <div id="results">
+        </div>
       </div>
     </div>
-  
+  </div>
 
   <!-- jquery -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
   <!-- bootstrap js -->
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
   <!-- underscore -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-
   <!-- custom script -->
   <script type="text/javascript" src="script.js"></script>
-
   <!-- underscore template -->
   <script type="text/template" id="spotify-template">
-    <div class="music">
-      <p>
-        <div class="col-md-12">
-          <img src='<%= image %>'>
-        </div> 
-        <div class="col-md-12" id="text">
-          <%= track %> - <%= artist %>
-        </div>
-        <div>
-          <audio src='<%= audio %>' controls="controls" id="audio">
-        </div>     
-      </p>
-      <br>
-      <hr>
+    <div class="col-md-12 music">
+      <div id ="image">
+        <img src='<%= image %>'>
+      </div>
+      <div id="text">
+        <%= track %> - <%= artist %>
+      </div>
+      <div>
+        <audio src='<%= audio %>' controls="controls" id="audio">
+      </div>
     </div>
   </script>
-</div>
+
 
 </body>
 </html>
